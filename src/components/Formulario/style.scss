@@ -1,0 +1,29 @@
+.formulario{
+     background-color: rgb(92, 92, 92);
+height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+    div{
+        display: flex;
+        flex-direction: column;
+         
+    }
+    .inputContainer {
+        text-align: center;
+    }
+    .inputContainer input{
+ width: 200px;
+ height: 33px;
+color: black;
+border-radius: 4px;
+border: none;
+text-align: center;
+display: flex;
+    }
+}
