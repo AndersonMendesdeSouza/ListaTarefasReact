@@ -1,12 +1,12 @@
 import React from "react";
 
-import './style.scss'
-class Botao extends React.Component{
+import style from'./style.module.scss'
+class Botao extends React.Component<{children: React.ReactNode}>{
     render(): React.ReactNode {
         return(
 
-<button className="botao">
-Enviar
+<button className={style.botao}>
+ {this.props.children}
 </button>
 
 

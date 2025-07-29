@@ -1,35 +1,36 @@
 import React from "react";
-import './style.scss'
+import style from'./Lista.module.scss'
+import Iten from "./iten/Iten";
 
 function Lista(){
 const tarefa = [
     {
-nome:'react',
+tarefa:'react',
 tempo:'02:00:00'
 },
 {
-nome:'javaScript',
+tarefa:'javaScript',
 tempo: '01:00:00'
 },
 {
-    nome:'typeScript',
+    tarefa:'typeScript',
     tempo:'03:00:00'
 }
 ];
 
     return(
  
-<aside className="listaTarefas">
+<aside className={style.listaTarefas}>
 
 <h2> ESTUDOS DO DIA</h2>
 
 <ul>
-{tarefa.map((tarefa, index)=> (
-<li key={index}>
-    <h3>{tarefa.nome}</h3>
-    <span>{tarefa.tempo}</span>
-     
-</li>
+{tarefa.map((iten, index)=> (
+<Iten
+key={index}
+ tarefa ={iten.tarefa}
+ tempo ={iten.tempo}
+/>
 
 ) )}
 
