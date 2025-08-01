@@ -1,32 +1,17 @@
 import React, { useState } from "react";
 import style from'./Lista.module.scss'
 import Iten from "./iten/Iten";
+import { Itarefa } from "../../types/Itarefas";
 
-function Lista(){
 
-const [tarefa, setTarefas] = useState([
-       {
-tarefa:'react',
-tempo:'02:00:00'
-},
-{
-tarefa:'javaScript',
-tempo: '01:00:00'
-},
-{
-    tarefa:'typeScript',
-    tempo:'03:00:00'
-}]
-)
+
+function Lista({tarefa}:{tarefa:Itarefa[]}){
 
     return(
  
 <aside className={style.listaTarefas}>
 
-<h2 onClick={()=>{
-    setTarefas([...tarefa, {tarefa: "HTML", tempo: "01:00:00"}])
-
-}}> ESTUDOS DO DIA</h2>
+<h2> ESTUDOS DO DIA</h2>
 
 <ul>
 {tarefa.map((iten, index)=> (
